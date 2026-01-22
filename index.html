@@ -39,6 +39,11 @@
             --glass-border: rgba(255, 255, 255, 0.18);
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--dark-bg);
@@ -191,6 +196,7 @@
             align-items: center;
             justify-content: center;
             padding: 0 5%;
+            padding-top: 80px;
             position: relative;
         }
 
@@ -314,6 +320,15 @@
             font-weight: 800;
             font-family: 'Outfit', sans-serif;
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .profile-details {
@@ -877,6 +892,9 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
+            html {
+                scroll-padding-top: 70px;
+            }
 
             .hero-content,
             .about-content {
@@ -910,6 +928,14 @@
         }
 
         @media (max-width: 768px) {
+            html {
+                scroll-padding-top: 60px;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
             .hero-text h1 {
                 font-size: 3rem;
             }
@@ -945,6 +971,10 @@
         }
 
         @media (max-width: 480px) {
+            html {
+                scroll-padding-top: 60px;
+            }
+
             .hero-text h1 {
                 font-size: 2.5rem;
             }
@@ -966,7 +996,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="scrollToSection('hero')">JJ</div>
+            <div class="logo" onclick="scrollToSection('hero')">Jaideep Jagyasi</div>
             <ul class="nav-links">
                 <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
                 <li><a href="#experience" onclick="scrollToSection('experience')">Experience</a></li>
@@ -999,7 +1029,9 @@
             <div class="hero-image">
                 <div class="profile-card">
                     <div class="profile-info">
-                        <div class="profile-avatar">JJ</div>
+                        <div class="profile-avatar">
+                            <img src="assets/jaideep.jpeg" alt="Jaideep Jagyasi">
+                        </div>
                         <h2>Jaideep Jagyasi</h2>
                         <div class="profile-details">
                             <div class="profile-detail-item">
